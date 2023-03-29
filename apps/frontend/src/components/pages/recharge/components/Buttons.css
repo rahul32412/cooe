@@ -1,0 +1,40 @@
+:root {
+  --buttonBackColour: #e0e0e0;
+  --buttonColour: rgba(0, 0, 0, 0.87);
+  --boxShadow: rgba(0, 0, 0, 0.5);
+  --buttonColourHover: rgb(2, 170, 248);
+}
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+.button {
+  background-color: var(--buttonBackColour);
+  border-radius: 2px;
+  height: 35px;
+  width: 115px;
+  border: none;
+  color: var(--buttonColour);
+  padding: 12px 12px 28px 25px;
+  box-shadow: 0 0 10px var(--boxShadow);
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 14px;
+  margin: 8px 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--buttonColourHover);
+}
+@media screen and (max-width: 100px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

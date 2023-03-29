@@ -1,0 +1,86 @@
+:root {
+  --warning: #fb8c00;
+  --white: white;
+  --pHover: #e0e0e0;
+}
+
+.recharge-page .warning {
+  padding: 20px 0 15px 20px;
+  background-color: var(--warning);
+  box-shadow: 0 0 10px rgba(15, 0, 0, 0.5);
+  color: var(--white);
+  min-height: 20px;
+  display: flex;
+  font-size: 15px;
+  border-bottom: 3px solid var(--white);
+}
+.recharge-page .Header {
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  border-bottom: 4px solid var(--white);
+  background-color: var(--secondry);
+}
+.recharge-page .div1 {
+  display: inline-block;
+}
+
+.recharge-page .div2 {
+  display: inline-block;
+}
+.recharge-page .backButton {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  width: 2px;
+}
+.recharge-page .rechargeH {
+  color: var(--white);
+  height: 60px;
+  padding-left: 15px;
+}
+
+.recharge-page .balance {
+  text-align: center;
+  padding: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: normal;
+  font-family: Roboto, sans-serif;
+}
+
+.recharge-page .RechargeButton {
+  display: block;
+  margin: 30px auto;
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary);
+  font-size: 15px;
+  color: var(--white);
+}
+
+.recharge-page .dropdownButton {
+  width: 100%;
+  padding: 30px;
+  border: none;
+  text-align: start;
+  background-color: transparent;
+}
+
+.recharge-page p {
+  font-size: 17px;
+  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.recharge-page p:hover {
+  background-color: var(--pHover);
+}

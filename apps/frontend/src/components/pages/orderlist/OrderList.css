@@ -1,0 +1,40 @@
+:root {
+    --headerColour: #2692be;
+    --buttonColour: white;
+  }
+  .orderList-Container .orderList-Header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    background-color: var(--headerColour);
+  }
+  
+  .orderList-Container .orderList-div1 {
+    display: inline-block;
+    background-color: var(--headerColour);
+  }
+  
+  .orderList-Container .orderList-div2 {
+    display: inline-block;
+  }
+  
+  .orderList-Container .orderList-button {
+    background-color: transparent;
+    border: none;
+    color: var(--buttonColour);
+    width: 2px;
+  }
+  
+  .orderList-Container h3 {
+    color: var(--buttonColour);
+    height: 60px;
+    padding-left: 15px;
+  }
+  
+  .orderList-Container .OrderList-Accordion {
+    background-color: var(--buttonColour);
+    padding-top: 10px;
+  }
+  

@@ -1,0 +1,129 @@
+:root {
+  --boxShadow: rgba(0, 0, 0, 0.5);
+  --walletIcon: #ccc;
+  --popup-container: rgba(0, 0, 0, 0.5);
+  --white: white;
+  --boxShadow: rgba(0, 0, 0, 0.5);
+  --inputBottom: #ccc;
+  --submitButton: lightseagreen;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+}
+.formSubmit {
+  width: 97%;
+  height: 50%;
+}
+.payIn {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px var(--boxShadow);
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  padding-left: 20px;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+.walletIcon {
+  margin-right: 15px;
+  color: var(--walletIcon);
+  font-size: 30px;
+}
+
+/* Payment form styles */
+.payment-form-container .top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.payment-form-container .top .amount {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.payment-form-container {
+  background-color: var(--white);
+  padding: 20px 50px;
+}
+
+.payment-form-container form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin: 10px 0;
+}
+
+.payment-form-container form .form-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.payment-form-container form .form-item label svg {
+  display: block;
+  margin-right: 7px;
+}
+
+.payment-form-container form .form-item input {
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  line-height: 20px;
+}
+.payment-form-container form .form-item.payment-options-container {
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.payment-form-container
+  form
+  .form-item.payment-options-container
+  select#payment-options {
+  font-size: 17px;
+  font-weight: 400;
+}
+.payment-form-container
+  form
+  .form-item.payment-options-container
+  select#payment-options
+  option {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 0 10px;
+}
+.payment-form-container .payment-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-form-container button {
+  padding: 5px 10px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
+}
+
+.payment-form-container button.close-button {
+  background-color: rgb(21, 21, 21);
+}
+.payment-form-container button.submit-button {
+  background-color: var(--submitButton);
+}
+.payment-form-container button.close-button:hover {
+  background-color: rgb(249, 34, 34);
+}
+.payment-form-container button.submit-button:hover {
+  background-color: rgb(55, 222, 55);
+}

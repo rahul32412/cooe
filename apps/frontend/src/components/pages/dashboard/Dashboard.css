@@ -1,0 +1,76 @@
+:root {
+  --profile-bg: #dddddd;
+  --profile-nested-nav-links-color: black;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.dashboard .profile-upper-sectiion {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.dashboard .profile-upper-sectiion .profile-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .profile-upper-sectiion .profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--profile-bg);
+  font-size: 120px;
+}
+
+.dashboard .profile-upper-sectiion .profile-actions {
+  display: flex;
+  column-gap: 20px;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+
+.dashboard .profile-upper-sectiion .profile .profile-details {
+  display: flex;
+  column-gap: 20px;
+}
+
+.profile-details-fields,
+.profile-details-values {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.profile .profile-details .profile-details-fields {
+  font-weight: 600;
+}
+
+.dashboard .profile-nav-item-title {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.dashboard .profile-nav-nested-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.dashboard .profile-nav-nested-links a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--profile-nested-nav-links-color);
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}

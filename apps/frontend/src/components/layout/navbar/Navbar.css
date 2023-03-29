@@ -1,0 +1,23 @@
+.navbar {
+  position: sticky;
+  bottom: 0px;
+  background-color: var(--primary);
+}
+
+.navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20%;
+  padding: 12px 0;
+}
+
+.navbar .nav-links a,
+button {
+  font-size: 16px;
+  color: white;
+}
+
+.navbar .nav-links a svg {
+  font-size: 25px;
+}

@@ -1,0 +1,61 @@
+:root {
+  --headerColour: #2692be;
+  --buttonColour: white;
+}
+
+.complaintForm-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--buttonColour);
+    border: 1px solid var(--buttonColour);
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  #fs-frm-inputs label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #fs-frm-inputs input[type="text"],
+  #fs-frm-inputs input[type="email"],
+  #fs-frm-inputs input[type="all"],
+  #fs-frm-inputs input[type="telephone"],
+  #fs-frm-inputs textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid var(--buttonColour);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  #fs-frm-inputs input[type="submit"] {
+    background-color: var(--headerColour);
+    color: var(--buttonColour);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  #fs-frm-inputs input[type="submit"]:hover {
+    background-color: var(--headerColour);
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .complaintForm-container {
+      padding: 10px;
+      width: 350px;
+    }
+    #fs-frm-inputs input[type="submit"] {
+      max-width: 100%;
+    }
+  }
+  
