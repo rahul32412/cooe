@@ -1,9 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import mongoose from "mongoose";
 const db_connect = async () => {
   try {
     await mongoose
       .connect(
-        `mongodb://${process.env.MONGO_DB_ATLAS_USER_NAME}:${process.env.MONGO_DB_ATLAS_USER_PASSWORD}@ac-ghxkn38-shard-00-00.ceqtztp.mongodb.net:27017,ac-ghxkn38-shard-00-01.ceqtztp.mongodb.net:27017,ac-ghxkn38-shard-00-02.ceqtztp.mongodb.net:27017/?ssl=true&replicaSet=atlas-axxxkj-shard-0&authSource=admin&retryWrites=true&w=majority`,
+        `mongodb+srv://${process.env.MONGO_DB_ATLAS_USER_NAME}:${process.env.MONGO_DB_ATLAS_USER_PASSWORD}@cooe.azdrgyd.mongodb.net/?retryWrites=true&w=majority`,
         { dbName: "cooe" }
       )
       .then(() => {

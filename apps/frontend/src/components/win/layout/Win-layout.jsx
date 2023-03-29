@@ -1,8 +1,22 @@
 import React from "react";
 import "./win-layout.css";
+import { useAuth0 } from "@auth0/auth0-react";
+import createContract from "../api/Contract";
 const WinLayout = ({ timer }) => {
+  const { user, getAccessTokenSilently } = useAuth0();
+  const handleContract = async (color) => {
+    const token = await getAccessTokenSilently();
+    createContract(
+      {
+        colorSelected: color,
+        contractMoney: 150,
+      },
+      user,
+      token
+    );
+  };
   return (
-    <div className="win">
+    <>
       <div className="top-bar">
         <p className="tobBar-header">Available Balance : ₹ 0.00</p>
         <div className="topBar-btn">
@@ -13,10 +27,31 @@ const WinLayout = ({ timer }) => {
           <i className=" refreshIcon fa-solid fa-arrows-rotate"></i>
         </span>
       </div>
+
+      {/* Timer of the game */}
+
       <div className="timer">
         <span className="min">Min: {timer.min} </span>
         <span className="sec">Seconds: {timer.sec}</span>
       </div>
+
+      {/* Contract controllers */}
+
+      <div className="contract">
+        <h3>Place contracts</h3>
+        <ul className="contract-controllers">
+          <li>
+            <button onClick={() => handleContract("green")}>Green</button>
+          </li>
+          <li>
+            <button onClick={() => handleContract("red")}>Red</button>
+          </li>
+          <li>
+            <button onClick={() => handleContract("blue")}>Blue</button>
+          </li>
+        </ul>
+      </div>
+
       <div className="record">
         <span className="trophyIcon">
           <i className="fa-sharp fa-solid fa-trophy"></i>
@@ -129,7 +164,7 @@ const WinLayout = ({ timer }) => {
       <div className="winfooter">
         <p className="winfooterTag">No data Available</p>
       </div>
-    </div>
+    </>
   );
 };
 

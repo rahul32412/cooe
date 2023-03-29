@@ -1,4 +1,3 @@
-import { Types } from "mongoose";
 import Order from "../models/Order.js";
 import User from "../models/User.js";
 export default class Contract {
@@ -14,12 +13,6 @@ export default class Contract {
       if (!userId || !contractMoney || !colorSelected) {
         return res.status(400).json({
           msg: "Invalid data",
-        });
-      }
-
-      if (!Types.ObjectId.isValid(userId)) {
-        return res.status(400).json({
-          msg: "Invalid userid",
         });
       }
 
@@ -40,7 +33,7 @@ export default class Contract {
         colorSelected,
       };
 
-      const user = await User.findById(userId);
+      const user = await User.findOne({ userId });
       if (!user) {
         return res.status(400).json({
           msg: "User does not exist",
@@ -52,9 +45,13 @@ export default class Contract {
         });
       }
       const contract = await Order.create(contractData);
-      const updateBalance = await User.findByIdAndUpdate(user, {
-        availableBalance: user.availableBalance - contractMoney,
-      });
+      const updateBalance = await User.findByIdAndUpdate(
+        user,
+        {
+          availableBalance: user.availableBalance - contractMoney,
+        },
+        { new: true }
+      );
 
       res
         .status(200)
@@ -101,6 +98,7 @@ export default class Contract {
         winner = "violet";
         console.log("Violet is the winner");
       }
+      this.winner = winner;
     } catch (error) {
       console.log(error);
     }

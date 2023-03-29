@@ -4,7 +4,7 @@ const UserSchema = mongoose.Schema({
   userId: { type: String, required: true },
   nickName: { type: String },
   mobile: { type: Number },
-  availableBalance: { type: mongoose.Types.Decimal128, default: 0.0 },
+  availableBalance: { type: Number, default: 0.0 },
   address: [
     {
       fullName: { type: String },

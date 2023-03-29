@@ -1,3 +1,5 @@
+import userContext from "../../../contexts/user-context/userContext";
+import { useContext } from "react";
 import "./Dashboard.css";
 import {
   FaUser,
@@ -52,6 +54,8 @@ const ProfileNavItem = ({
 };
 
 const Dashboard = () => {
+  const { UserData } = useContext(userContext);
+
   const [toggleId, setToggleId] = useState("");
   return (
     <div className="dashboard">
@@ -80,9 +84,9 @@ const Dashboard = () => {
               <span className="field">Available balance</span>
             </div>
             <div className="profile-details-values">
-              <span className="Value">91+ 7293930201</span>
-              <span className="Value">James Bond</span>
-              <span className="Value">$88</span>
+              <span className="Value">{UserData.nickname}</span>
+              <span className="Value">{UserData.mobile}</span>
+              <span className="Value">{UserData.availableBalance}</span>
             </div>
           </div>
         </div>

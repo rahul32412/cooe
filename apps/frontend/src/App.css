@@ -28,3 +28,6 @@
 svg {
   display: block;
 }
+.app {
+  min-height: 100vh;
+}

@@ -7,12 +7,12 @@ import { FaUser, FaGamepad, FaHome } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
-  const { loginWithPopup, logout, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   return (
     <nav className="navbar">
       <ul className="nav-links">
         {!isAuthenticated ? (
-          <button onClick={loginWithPopup}>Login</button>
+          <button onClick={loginWithRedirect}>Login</button>
         ) : (
           <button onClick={logout}>Logout</button>
         )}

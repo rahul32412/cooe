@@ -11,8 +11,7 @@ async function getUser(user, token) {
       },
     }
   );
-  console.log(res);
-  return res;
+  return res.data.user;
 }
 
 export { getUser };
