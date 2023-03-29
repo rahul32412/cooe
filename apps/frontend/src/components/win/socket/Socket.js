@@ -1,4 +1,3 @@
 import { io } from "socket.io-client";
-const URL = "http://localhost:8000";
-const Socket = io(URL);
+const Socket = io(import.meta.env.VITE_SERVER_URI);
 export default Socket;
